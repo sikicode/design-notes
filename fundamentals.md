@@ -1,0 +1,14 @@
+## Concepts
+- Scalability: grow horizontally (add servers) vs vertically (add power)
+- Reliability (not vulnerable) vs Availability (be available)
+- Efficiency: latency and bandwidth
+- Serviceability/Manageability: easy to debug and patch
+- Load Balancing (help horizontally adding servers): distribute traffic and stop requests when server's down
+  - Can be added in 3 cases: ![load-balancer.png](img%2Fload-balancer.png)
+  - LB algorithms: LCM, LRTM, LBM, RR, WRR, IP Hash https://www.cloudflare.com/learning/performance/types-of-load-balancing-algorithms/
+  - Redundant LB: use 2 lb as a cluster to handle single failure of point
+- Caching: (vertically, normally used in frontend): latest requested data is likely to be requested again
+  - Application Server Cache: local storage (local memory or disk) of response data 
+    - To avoid cache miss, use global cache or distributed cache
+  - Content Distribution Network (CDN)
+- 
