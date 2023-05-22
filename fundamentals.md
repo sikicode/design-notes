@@ -1,11 +1,8 @@
-## Concepts
-- Scalability: grow horizontally (add servers) vs vertically (add power)
-
-- Reliability (not vulnerable) vs Availability (be available)
-
-- Efficiency: latency and bandwidth
-
-- Serviceability/Manageability: easy to debug and patch
+- Key Characteristics for distributed system:
+  - Scalability: grow horizontally (add servers) vs vertically (add power)
+  - Reliability (not vulnerable) vs Availability (be available)
+  - Efficiency: latency and bandwidth
+  - Serviceability/Manageability: easy to debug and patch
 
 - Load Balancing (help horizontally adding servers): distribute traffic and stop requests when server's down
   - Can be added in 3 cases: ![load-balancer.png](img%2Fload-balancer.png)
@@ -43,4 +40,34 @@
 ![proxy.png](img%2Fproxy.png)
   - Types: 
     - Open Proxy: Accessible by any Internet user
+      - Anonymous Proxy: hide users IP address
+      - Transparent Proxy: first IP address is disclosed
+    - Reverse Proxy: obtain resource on behalf of a client
+
+- Redundancy and Replication: replication shares info to ensure consistency among redundant components 
+
+- SQL (relational) vs NoSQL (non-relational): rdb are structured and have predefined schemas, nosql db are unstructured distributed and dynamic (e.g. file system)
+  - SQL: store data in rows and cols (MySQL, Oracle, MS SQL Server, SQLite, Postgres, MariaDB)
+  - NoSQL: use different syntax then SQL
+    - Key-Value Stores: Redis, Voldemort, Dynamo
+    - Document Stores: CouchDB, MongoDB
+    - Wide-Column/Columnar DB: store containers for rows, but each row doesn't have to have the same number of columns, good for analyzing large db (Cassandra, HBase)
+    - Graph DB: store graph relationships (Neo4J, InfiniteGraph)
+  - NoSQL can be horizontally scalable (cheap), SQL can be vertically scalable (expensive)
+  - Most SQL db are ACID compliant - better bet on reliability and safety, NoSQL may sacrifice ACID compliance for performance and scalability
+  - When to choose SQL over noSQL: 
+    - Ensure ACID compliance 
+    - Data is structured and unchanging
+  - When to choose NoSQL over SQL:
+    - Storing large Volumes of data with no structure 
+    - To use cloud computing and storage
+    - Rapid Development
+
+- CAP Theorem: a distributed software system can't simultaneously provide > two out of three guarantees: Consistency, Availability, Partition Tolerance (CAP).
+  - Consistency: can be achieved by updating several nodes before allowing further reads
+  - Availability: Achieved by replicating data across servers
+  - Partition tolerance: replicating data across servers and networks to keep system up through network down
+  ![CAP.png](img%2FCAP.png)
+
+- Consistent Hashing: improve caching system
 
