@@ -3,12 +3,12 @@
   - Reliability (not vulnerable) vs Availability (be available)
   - Efficiency: latency and bandwidth
   - Serviceability/Manageability: easy to debug and patch
-
+<br><br>
 - Load Balancing (help horizontally adding servers): distribute traffic and stop requests when server's down
   - Can be added in 3 cases: ![load-balancer.png](img%2Fload-balancer.png)
   - LB algorithms: LCM, LRTM, LBM, RR, WRR, IP Hash https://www.cloudflare.com/learning/performance/types-of-load-balancing-algorithms/
   - Redundant LB: use 2 lb as a cluster to handle single failure of point
-
+<br><br>
 - Caching: (vertically, normally used in frontend): latest requested data is likely to be requested again
   - Types:
     - Application Server Cache: local storage (local memory or disk) of response data 
@@ -20,7 +20,7 @@
     - Write-back: data written to cache alone (low latency high risk of data loss)
   - Cache Eviction Policies:
     - FIFO, LIFO, LRU, MRU, LFU, RR
-
+<br><br>
 - Sharding/Data Partitioning
   - Schemes:
     - Horizontal Partitioning: Group different range of data in different tables (bottleneck: how to partition data evenly)
@@ -32,10 +32,10 @@
     - Round Robin Partitioning
     - Composite Partitioning: combine 1-3 and customize
   - Common Problems: Joins and de-normalization, Referential integrity, re-balancing
-
+<br><br>
 - Indexes: catalogs to fastening data access 
   - Unnecessary indexes decrease write performance
-
+<br><br>
 - Proxies: server between clients and backend servers; can cache a resource and serve to all clients 
 ![proxy.png](img%2Fproxy.png)
   - Types: 
@@ -43,9 +43,9 @@
       - Anonymous Proxy: hide users IP address
       - Transparent Proxy: first IP address is disclosed
     - Reverse Proxy: obtain resource on behalf of a client
-
-- Redundancy and Replication: replication shares info to ensure consistency among redundant components 
-
+<br><br>
+- Redundancy and Replication: replication shares info to ensure consistency among redundant components
+<br><br><br>
 - SQL (relational) vs NoSQL (non-relational): rdb are structured and have predefined schemas, nosql db are unstructured distributed and dynamic (e.g. file system)
   - SQL: store data in rows and cols (MySQL, Oracle, MS SQL Server, SQLite, Postgres, MariaDB)
   - NoSQL: use different syntax then SQL
@@ -62,12 +62,22 @@
     - Storing large Volumes of data with no structure 
     - To use cloud computing and storage
     - Rapid Development
-
+<br><br>
 - CAP Theorem: a distributed software system can't simultaneously provide > two out of three guarantees: Consistency, Availability, Partition Tolerance (CAP).
   - Consistency: can be achieved by updating several nodes before allowing further reads
   - Availability: Achieved by replicating data across servers
   - Partition tolerance: replicating data across servers and networks to keep system up through network down
   ![CAP.png](img%2FCAP.png)
-
-- Consistent Hashing: improve caching system
-
+<br><br>
+- Consistent Hashing: improve caching system, objects are mapped to same host if possible
+  - Algorithm: Hash key to int and move clockwise on a ring to find first cache
+  - handle unbalanced data: add virtual replicas for caches, map one key to multiple nodes
+<br><br>
+- Long-polling vs WebSockets vs Server-Sent Events: communication protocols between clients and servers
+- Polling
+  - Ajax polling: client repeatedly (e.g. intervals of 0.5 second) polls a server for data, empty response sent if no data's available. HTTP overhead would occur if too many responses are empty.
+  - HTTP long polling: polling but don't expect server to respond immediately (hanging GET)
+    - Once data becomes available server will send it back to client and client will immediately re-request.
+    - If request time out then connection is closed. Client has to reconnect periodically after timeouts.
+- WebSockets: enables full duplex (both direction) communication channels over one single TCP connection, both parties can start sending data at any time
+- Server-sent Events: persistent and long term connection between client and server (best for real-time communication)
