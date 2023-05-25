@@ -2,11 +2,12 @@
 
 ## Catalog:
 ### Cases
-- d
+- Easy Questions:
+  - [Design a URL Shortening Service like TinyURL](url_shortening_service.md)
 ### Basics
-- System design fundamental concepts: [fundamentals.md](fundamentals.md)
-- HTTP requests explained: [http_request.md](http_request.md)
-- System Design Interview Guide: [interview_guide.md](interview_guide.md)
+- [System Design Overview](fundamentals.md)
+- [HTTP Request Explained](http_request.md)
+- [System Design Interview Guide](interview_guide.md)
 
 ## Resources:
 1.	[Dynamo - Highly Available Key-value Store](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
