@@ -20,4 +20,7 @@
 ### Design Database
 - [What's read-heavy?](https://www.mullie.eu/why-your-code-doesnt-scale/#:~:text=Being%20read%2Dheavy%20means%20there,being%20able%20to%20service%20requests.)
 - Split User info into a separate table with primary key=UserID, other attributes can include email, name, creationDate, lastLogin time etc.
-- Use hashing & encoding if you need a unique value for each result, see [Encode Online])(https://emn178.github.io/online-tools/index.html)
+- Use hashing & encoding if you need a unique value for each result
+  - [Encoding vs Encryption vs Hashing vs Salting](https://medium.com/hackernoon/what-devs-need-to-know-about-encoding-encryption-hashing-salting-stretching-76a3da32e0fd) 
+  - [Encode Tools](https://emn178.github.io/online-tools/index.html)
+  - [Unicode (UTF) vs Binary (base64/62/32)](https://stackoverflow.com/questions/22677217/what-is-the-difference-between-a-unicode-and-binary-string#:~:text=The%20former%20describe%20the%20machine,two%20domains%20is%20encoding%2Fdecoding.)

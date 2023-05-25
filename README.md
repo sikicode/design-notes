@@ -19,4 +19,4 @@
 7.	[Chubby - Lock service for loosely-coupled distributed systems](http://static.googleusercontent.com/media/research.google.com/en/us/archive/chubby-osdi06.pdf)
 8.	[ZooKeeper - Wait-free coordination for Internet-scale systems](https://www.usenix.org/legacy/event/usenix10/tech/full_papers/Hunt.pdf)
 9.	[MapReduce - Simplified Data Processing on Large Clusters](https://storageconference.us/2010/Papers/MSST/Shvachko.pdf)
-10.	[Hadoop - A Distributed File System]()
+10.	[Hadoop - A Distributed File System](https://storageconference.us/2010/Papers/MSST/Shvachko.pdf)
