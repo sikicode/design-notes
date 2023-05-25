@@ -19,3 +19,5 @@
 - [Powers of 10](https://www.varsitytutors.com/hotmath/hotmath_help/topics/powers-of-10)
 ### Design Database
 - [What's read-heavy?](https://www.mullie.eu/why-your-code-doesnt-scale/#:~:text=Being%20read%2Dheavy%20means%20there,being%20able%20to%20service%20requests.)
+- Split User info into a separate table with primary key=UserID, other attributes can include email, name, creationDate, lastLogin time etc.
+- Use hashing & encoding if you need a unique value for each result, see [Encode Online])(https://emn178.github.io/online-tools/index.html)

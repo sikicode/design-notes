@@ -20,4 +20,11 @@
 - Bandwidth: incoming data size, outgoing data size
 - Memory: cache size
 ### DB Design: 
-large amount of records, each record is small, no relationship between records, read heavy - NoSQL Key-Value Pairs (Redis, Voldemort, Dynamo)
+- large amount of records, each record is small, no relationship between records, read heavy - NoSQL Key-Value Pairs (Redis, Voldemort, Dynamo)
+- Table design: URL + User
+### Diagram: 
+- 
+### Dive in && Bottleneck:
+- Key Generation
+  - Encoding actual URL: 
+  - 
