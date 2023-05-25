@@ -16,5 +16,6 @@
 - expiration_time(string): date & time to timeout a service
 ### Estimation Units
 - [Calculate bit-byte-KB-MB-GB-TB-PB-EB](http://www.wu.ece.ufl.edu/links/dataRate/DataMeasurementChart.html)
+- [Powers of 10](https://www.varsitytutors.com/hotmath/hotmath_help/topics/powers-of-10)
 ### Design Database
 - [What's read-heavy?](https://www.mullie.eu/why-your-code-doesnt-scale/#:~:text=Being%20read%2Dheavy%20means%20there,being%20able%20to%20service%20requests.)
