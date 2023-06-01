@@ -27,4 +27,13 @@
 ### Dive in && Bottleneck:
 - Key Generation
   - Encoding actual URL: 
-  - 
+    - what if actual url is encoded? what if multiple user all gets a same result with the same actual url? (add an increasing sequence/userid as salt, might get other problems)
+  - Generate keys offline: 
+    - KGS but you have to pay attention to concurrency (use two tables used/not used to store keys, lock data structure so only one server get a key at one time)
+    - Replica to handle single point of failure
+    - Learn to compute KGS DB size by base64 encoding and more
+  - Key Lookup: HTTP 302 Redirect, HTTP 404 Not Found
+  - Customer key size limit
+- Data Partitioning: 
+  - Range Based Partitioning: may results in un
+- 
