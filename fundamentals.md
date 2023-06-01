@@ -69,7 +69,7 @@
   - Partition tolerance: replicating data across servers and networks to keep system up through network down
   ![CAP.png](img%2FCAP.png)
 <br><br>
-- Consistent Hashing: improve caching system, objects are mapped to same host if possible
+- Consistent Hashing ([Python Implementation](https://gist.github.com/soekul/a240f9e11d6439bd0237c4ab45dce7a2)): improve caching system, objects are mapped to same host if possible
   - Algorithm: Hash key to int and move clockwise on a ring to find first cache
   - handle unbalanced data: add virtual replicas for caches, map one key to multiple nodes
 <br><br>
